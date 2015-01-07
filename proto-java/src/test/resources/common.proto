@@ -1,0 +1,5 @@
+package com.spaceape.common
+
+message Timestamp {
+    required int64 time = 1
+}

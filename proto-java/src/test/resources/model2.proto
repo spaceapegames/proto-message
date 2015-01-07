@@ -1,0 +1,7 @@
+import model.proto
+
+package com.spaceape.model2
+
+message Clan {
+    optional ProfileTO shogun = 1
+}

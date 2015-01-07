@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProtoMessage/GeneratedCSharp/com/spaceape/protobuf/ClassRegistry.cs">
+    <Files>
+      <File FileName="ProtoMessage/GeneratedCSharp/com/spaceape/model/ProfileTO.cs" Line="1" Column="1" />
+      <File FileName="ProtoMessage/ApeMessage/GeneratedMessage.cs" Line="1" Column="1" />
+      <File FileName="ProtoMessage/Protobuff/CodedOutputStream.cs" Line="1" Column="1" />
+      <File FileName="ProtoMessage/GeneratedCSharp/com/spaceape/model/Profile2TO.cs" Line="27" Column="27" />
+      <File FileName="ProtoMessage/GeneratedCSharp/com/spaceape/protobuf/ClassRegistry.cs" Line="5" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/keren/Dev/proto-message/src/main/csharp/ProtoMessage/ProtoMessage/ApeMessage/ClassDescriptor.cs" line="64" column="1" />
+      <Breakpoint file="/Users/keren/Dev/proto-message/proto-csharp/ProtoMessage/ProtoMessage/Tests/com/spaceape/protobuf/patch/PatchTest.cs" line="32" column="1" />
+      <Breakpoint file="/Users/keren/Dev/proto-message/proto-csharp/ProtoMessage/ProtoMessage/Tests/com/spaceape/protobuf/patch/PatchTest.cs" line="30" column="1" />
+      <Breakpoint file="/Users/keren/Dev/proto-message/proto-csharp/ProtoMessage/ProtoMessage/ApeMessage/GeneratedMessage.cs" line="155" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{380F3DA8-C2F4-4366-930D-C5378D61AEE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ProtoMessage</RootNamespace>
+    <AssemblyName>ProtoMessage</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.core">
+      <HintPath>ExcludeFromBuild\nunit\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.extensions">
+      <HintPath>ExcludeFromBuild\nunit\nunit.core.extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>ExcludeFromBuild\nunit\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>ExcludeFromBuild\nunit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework.extensions">
+      <HintPath>ExcludeFromBuild\nunit\nunit.framework.extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>ExcludeFromBuild\nunit\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>ExcludeFromBuild\nunit\nunit.util.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Collections\Dictionaries.cs" />
+    <Compile Include="Collections\Enumerables.cs" />
+    <Compile Include="Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="Protobuff\ByteArray.cs" />
+    <Compile Include="Protobuff\ByteString.cs" />
+    <Compile Include="Protobuff\CodedInputStream.cs" />
+    <Compile Include="Protobuff\CodedOutputStream.cs" />
+    <Compile Include="Protobuff\FieldMappingAttribute.cs" />
+    <Compile Include="Protobuff\FieldType.cs" />
+    <Compile Include="Protobuff\FrameworkPortability.cs" />
+    <Compile Include="Protobuff\InvalidProtocolBufferException.cs" />
+    <Compile Include="Protobuff\MappedType.cs" />
+    <Compile Include="Protobuff\WireFormat.cs" />
+    <Compile Include="ApeMessage\GeneratedMessage.cs" />
+    <Compile Include="ApeMessage\CodeGenContext.cs" />
+    <Compile Include="ApeMessage\MessageParsingException.cs" />
+    <Compile Include="ApeMessage\Utils\HashCodeBuilder.cs" />
+    <Compile Include="GeneratedCSharp\**\*.cs" />
+    <Compile Include="Tests\com\spaceape\model\ProfileTOTest.cs" />
+    <Compile Include="ApeMessage\Constructor.cs" />
+    <Compile Include="ApeMessage\ConstructorFactory.cs" />
+    <Compile Include="Tests\com\spaceape\model\CrossLangTest.cs" />
+    <Compile Include="ApeMessage\Patch\DeltaType.cs" />
+    <Compile Include="ApeMessage\Patch\DiffPair.cs" />
+    <Compile Include="ApeMessage\Patch\PatchContext.cs" />
+    <Compile Include="ApeMessage\DiffUtil.cs" />
+    <Compile Include="Tests\com\spaceape\protobuf\patch\PatchTest.cs" />
+    <Compile Include="Tests\com\spaceape\protobuf\MessageTestUtil.cs" />
+    <Compile Include="ApeMessage\CopyContext.cs" />
+    <Compile Include="ApeMessage\Reflect\FieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\ListFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\MessageFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\MessageEnumFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\BoolFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\DoubleFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\FloatFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\IntFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\LongFieldDescriptor.cs" />
+    <Compile Include="ApeMessage\Reflect\StringFieldDescriptor.cs" />
+    <Compile Include="Tests\com\spaceape\protobuf\reflect\FieldDescriptorTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Collections\" />
+    <Folder Include="Protobuff\" />
+    <Folder Include="ApeMessage\" />
+    <Folder Include="ApeMessage\Utils\" />
+    <Folder Include="GeneratedCSharp\" />
+    <Folder Include="Tests\" />
+    <Folder Include="Tests\com\" />
+    <Folder Include="Tests\com\spaceape\" />
+    <Folder Include="Tests\com\spaceape\model\" />
+    <Folder Include="ExcludeFromBuild\" />
+    <Folder Include="ApeMessage\Patch\" />
+    <Folder Include="Tests\com\spaceape\protobuf\" />
+    <Folder Include="Tests\com\spaceape\protobuf\patch\" />
+    <Folder Include="ApeMessage\Reflect\" />
+    <Folder Include="Tests\com\spaceape\protobuf\reflect\" />
+  </ItemGroup>
+</Project>

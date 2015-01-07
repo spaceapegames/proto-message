@@ -1,0 +1,45 @@
+import common.proto
+import model2.proto
+
+package com.spaceape.model
+
+enum ResourceTypeTO {
+    Solid = 1
+    Liquid = 2
+}
+
+message Entity {
+    required string id = 1
+}
+
+message ProfileTO extends Entity{
+  required string name = 10
+  required int32 counter = 20
+  optional Clan clan = 30
+  optional Timestamp createdOn = 40
+  repeated ProfileTO friends = 50
+  optional ResourceTO coins = 60
+  optional int64 lastActiveTime = 61
+  optional double warBonus = 62
+  optional float penalty = 63
+  repeated ResourceTO collections = 64
+  repeated ResourceTypeTO availableResources = 65
+}
+
+message Profile2TO extends Entity{
+  required string name = 10
+  required int32 counter = 20
+  optional Clan clan = 30
+  repeated ProfileTO friends = 50
+}
+
+message Profile3TO extends Entity{
+  required int32 counter = 20
+  optional Clan clan = 30
+  repeated ProfileTO friends = 50
+}
+
+message ResourceTO {
+    optional ResourceTypeTO resourceType = 1
+    optional int32 amount = 2
+}
